@@ -17,7 +17,7 @@ const Menu = ({history}) => (
         <nav className="navbar navbar-expand-sm bg-info navbar-dark">
             <div className="container-fluid">
                 <Link to="/" target="_parent"  className="nav-link">
-                    <img src='../images/icons/logo.PNG' alt="Logo" />
+                    <img src='../images/icons/logo.PNG' alt="LaxStore" />
                 </Link>
                 <button type="button" className="navbar-toggler" data-toggle="collapse" data-target="#reactnav">
                     <span className="navbar-toggler-icon"></span>
