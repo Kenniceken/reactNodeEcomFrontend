@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="./css/util.css">
+    <link rel="stylesheet" type="text/css" href="./css/forms.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="css/themify-icons.css" />
+    <link rel="stylesheet" href="css/flaticon.css" />
+
+
+
+
+      <title>LaxStore</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+  <div class="flex-w p-b-90">
+    <div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+      <h4 class="s-text12 p-b-30">
+        GET IN TOUCH
+      </h4>
+
+      <div>
+        <p class="s-text7 w-size27">
+          Visit our store at 8th floor, 379 Hudson St, <br>
+          New York, NY 10018 <br>
+          or call us on (+1) 96 716 6879
+        </p>
+      </div>
+    </div>
+
+    <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+      <h4 class="s-text12 p-b-30">
+        Quick Links
+      </h4>
+
+      <ul>
+        <li class="p-b-9">
+          <a href="/" class="s-text7">
+            Home
+          </a>
+        </li>
+
+        <li class="p-b-9">
+          <a href="/shop" class="s-text7">
+            Shop
+          </a>
+        </li>
+
+        <li class="p-b-9">
+          <a href="/contact" class="s-text7">
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+      <h4 class="s-text12 p-b-30">
+        About LexStore
+      </h4>
+
+      <ul>
+        <li class="p-b-9">
+          <a href="/about" class="s-text7">
+            About Us
+          </a>
+        </li>
+        <li class="p-b-9">
+          <a href="/login" class="s-text7">
+            Login
+          </a>
+        </li>
+
+        <li class="p-b-9">
+          <a href="/register" class="s-text7">
+            Register
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+
+
+    </div>
+
+    <div class="w-size8 p-t-30 p-l-15 p-r-15 respon3">
+      <h4 class="s-text12 p-b-30">
+        Newsletter
+      </h4>
+
+      <form>
+        <div class="effect1 w-size9">
+          <input class="s-text7 bg6 w-full p-b-5" type="text" name="email" placeholder="email@example.com">
+          <span class="effect1-line"></span>
+        </div>
+
+        <div class="w-size2 p-t-20">
+          <!-- Button -->
+          <button class="flex-c-m size2 bg4 bo-rad-23 hov1 m-text3 trans-0-4">
+            Subscribe
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="col-md-6 mx-auto p-t-140">
+      <div class="t-center s-text8">
+        Copyright © <script type="text/javascript">
+        document.write(new Date().getFullYear());
+      </script> LaxStore E-Commerce
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+    <script type="text/javascript"  src="vendor/jquery/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript"  src="vendor/bootstrap/js/popper.js"></script>
+    <script type="text/javascript"  src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./vendor/slick/slick.min.js"></script>
+    <script type="text/javascript" src="./js/slick-custom.js"></script>
+    <script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+      });
+
+      jQuery( document ).ready(function( $ ) {
+
+        //Use this inside your document ready jQuery
+        $(window).on('popstate', function() {
+          location.reload();
+        });
+      });
+    </script>
+    <script>
+      window.setTimeout(function() {
+        $(".alert").fadeTo(5000, 0).slideUp(5000, function(){
+          $(this).remove();
+        });
+      }, 5000);
+    </script>
+
+  <script>
+      $('.multi-item-carousel').on('slide.bs.carousel', function (e) {
+          let $e = $(e.relatedTarget),
+              itemsPerSlide = 3,
+              totalItems = $('.carousel-item', this).length,
+              $itemsContainer = $('.carousel-inner', this),
+              it = itemsPerSlide - (totalItems - $e.index());
+          if (it > 0) {
+              for (var i = 0; i < it; i++) {
+                  $('.carousel-item', this).eq(e.direction == "left" ? i : 0).
+                  // append slides to the end/beginning
+                  appendTo($itemsContainer);
+              }
+          }
+      });
+  </script>
+  </body>
+</html>

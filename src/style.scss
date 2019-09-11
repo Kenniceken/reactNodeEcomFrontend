@@ -1,0 +1,679 @@
+@import "sass/menu.scss";
+@import "sass/breadcrumb.scss";
+@import "sass/button";
+@import "sass/clients";
+@import "sass/contact";
+@import "sass/elements";
+@import "sass/feature";
+@import "sass/footer";
+@import "sass/offer";
+@import "sass/product";
+@import "sass/variables.scss";
+@import "~bulma/sass/utilities/_all.sass";
+@import "~bulma/sass/base/_all.sass";
+@import "~bulma/sass/elements/button.sass";
+@import "~bulma/sass/layout/section.sass";
+
+.html {
+  //color: $primaryColor;
+}
+
+body {
+  background-color: #fff;
+  color: #022b36;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  height: 100%;
+  position: relative;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
+}
+
+.nav .navbar-nav li{
+  color: #0b2e13 !important;
+}
+
+.dropdownDiv .dropdown{
+  right: 65px;
+  top: 7px;
+}
+
+
+
+.linedivide1 {
+  height: 20px;
+  width: 1px;
+  background-color: #8b0d10;
+  left: -65px !important;
+  top: 7px;
+}
+
+
+.navbar-nav > li > .dropdown-menu {
+  margin-top: 0;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  display: block;
+  transform: scale(0);
+  transition: ease-out 0.3s;
+
+}
+.dropdown:hover .dropdown-menu {
+  transform: scale(1);
+}
+.dropdown-menu1
+{
+  border:none;
+  display: block;
+  transform: scale(1)!important;
+  height: 0px;
+  overflow: hidden;
+  padding: 0px;
+  top: 180px;
+  transition: all .3s;
+}
+.dropdown:hover .dropdown-menu1
+{
+  display: block;
+  top: 100%;
+  height: inherit;
+}
+
+@media  only screen and (max-width: 576px) {
+  .dropdownDiv .dropdown{
+    left: 4px;
+    top: 7px;
+  }
+
+  .navbar-nav > li > .dropdown-menu {
+    margin-top: 0;
+    display: block;
+    transition: ease-out 0.3s;
+    border: none !important;
+
+  }
+
+  .dropdown:hover .dropdown-menu {
+    transform: none;
+  }
+
+  .dropdown-menu1
+  {
+    border:none;
+    display: block;
+    height: 0px;
+    overflow: hidden;
+    padding: 10px;
+    top: 60px;
+    transition: all .3s;
+  }
+
+  .dropdown-menu .nav-link{
+   // text-align: center !important;
+    position: relative;
+    left: 20px;
+  }
+
+  .header-icons-noti {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #111111;
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    left: 17px;
+  }
+
+  .header-icon1:hover,
+  .header-icon2:hover {
+    cursor: pointer;
+  }
+}
+.headerHead {
+  font-size: 2rem;
+  font-family: 'Exo 2', sans-serif;
+  margin-bottom: 10px;
+}
+
+.layoutTexts {
+  font-family: 'Exo 2', sans-serif;
+}
+
+.custom-file-control, .custom-file{
+  font-family: 'Exo', Trebuchet;
+  color: #607d8b;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.custom-file-input[type="file"]{
+  display: none !important;
+}
+
+//============================================
+.lexstore-shop {
+  padding-bottom: 9em;
+  clear: both;
+}
+
+.lexstore-heading {
+  margin-bottom: 5em;
+}
+.lexstore-heading h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  color: #3d3d3d;
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Exo 2', sans-serif;
+}
+.lexstore-heading h2 span {
+  position: relative;
+}
+.lexstore-heading h2 span:after {
+  position: absolute;
+  top: 49%;
+  left: -80px;
+  bottom: 0;
+  content: '';
+  width: 60px;
+  height: 2px;
+  background: #e65540;
+}
+.lexstore-heading h2 span:before {
+  position: absolute;
+  top: 49%;
+  right: -80px;
+  bottom: 0;
+  content: '';
+  width: 60px;
+  height: 2px;
+  background: #e65540;
+}
+
+.lexstore-headingP {
+  max-width: 600px;
+  position: absolute;
+  left: 50%;
+  top: 120%;
+  transform: translate(-50%, -50%);
+}
+
+.btn, .jumbotron {
+  border-radius: 0;
+}
+
+.jumbotron {
+  width: 30wh;
+  height: 30vh;
+  color: #fff;
+  background-image: linear-gradient(to bottom, rgba(139, 13, 16, 0.52), rgba(232, 65, 24, 0.52), rgba(6, 124, 230, 0.73))
+  ,url(images/blog-04.jpg);
+
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.tooltip-inner {
+  background-color: #e65540;
+}
+.tooltip.bs-tooltip-right .arrow:before {
+  border-right-color: #e65540 !important;
+}
+.tooltip.bs-tooltip-left .arrow:before {
+  border-right-color: #e65540 !important;
+}
+.tooltip.bs-tooltip-bottom .arrow:before {
+  border-right-color: #e65540 !important;
+}
+.tooltip.bs-tooltip-top .arrow:before {
+  border-right-color: #e65540 !important;
+}
+
+
+///////////////////////Checkbox////////////////////////
+
+.toggle{
+  --uiToggleSize: var(--toggleSize, 10px);
+  --uiToggleIndent: var(--toggleIndent, .4em);
+  --uiToggleBorderWidth: var(--toggleBorderWidth, 2px);
+  --uiToggleColor: var(--toggleColor, #3d3d3d);
+  --uiToggleDisabledColor: var(--toggleDisabledColor, #868e96);
+  --uiToggleBgColor: var(--toggleBgColor, #fff);
+  --uiToggleArrowWidth: var(--toggleArrowWidth, 2px);
+  --uiToggleArrowColor: var(--toggleArrowColor, #fff);
+
+  display: inline-block;
+  position: relative;
+}
+
+.toggle__input{
+  position: absolute;
+  left: -99999px;
+}
+
+.toggle__label{
+  display: inline-flex;
+  cursor: pointer;
+  min-height: var(--uiToggleSize);
+  padding-left: calc(var(--uiToggleSize) + var(--uiToggleIndent));
+}
+
+.toggle__label:before, .toggle__label:after{
+  content: "";
+  box-sizing: border-box;
+  width: 1em;
+  height: 1em;
+  font-size: var(--uiToggleSize);
+
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.toggle__label:before{
+  border: var(--uiToggleBorderWidth) solid var(--uiToggleColor);
+  z-index: 2;
+}
+
+.toggle__input:disabled ~ .toggle__label:before{
+  border-color: var(--uiToggleDisabledColor);
+}
+
+.toggle__input:focus ~ .toggle__label:before{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 4px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled):checked:focus ~ .toggle__label:after{
+  box-shadow: 0 0 0 2px var(--uiToggleBgColor), 0 0 0px 4px var(--uiToggleColor);
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  background-color: var(--uiToggleColor);
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  opacity: 1;
+}
+
+.toggle__text{
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+/*
+The arrow size and position depends from sizes of square because I needed an arrow correct positioning from the top left corner of the element toggle
+*/
+
+.toggle__text:before{
+  content: "";
+  box-sizing: border-box;
+  width: 0;
+  height: 0;
+  font-size: var(--uiToggleSize);
+
+  border-left-width: 0;
+  border-bottom-width: 0;
+  border-left-style: solid;
+  border-bottom-style: solid;
+  border-color: var(--uiToggleArrowColor);
+
+  position: absolute;
+  top: .5428em;
+  left: .2em;
+  z-index: 3;
+
+  transform-origin: left top;
+  transform: rotate(-40deg) skew(10deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  width: .5em;
+  height: .25em;
+  border-left-width: var(--uiToggleArrowWidth);
+  border-bottom-width: var(--uiToggleArrowWidth);
+  will-change: width, height;
+  transition: width .1s ease-out .2s, height .2s ease-out;
+}
+
+.toggle__label:before, .toggle__label:after{
+  border-radius: 2px;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:before,
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  opacity: 1;
+  transform-origin: center center;
+  will-change: transform;
+  transition: transform .2s ease-out;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:before{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__input:not(:disabled) ~ .toggle__label:after{
+  transform: rotateY(90deg);
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:before{
+  transform: rotateY(-90deg);
+  transition-delay: 0s;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label:after{
+  transform: rotateY(0deg);
+  transition-delay: .2s;
+}
+
+.toggle__text:before{
+  opacity: 0;
+}
+
+.toggle__input:not(:disabled):checked ~ .toggle__label .toggle__text:before{
+  opacity: 1;
+  transition: opacity .1s ease-out .3s, width .1s ease-out .5s, height .2s ease-out .3s;
+}
+
+.toggle{
+  --toggleColor: #e65540;
+  --toggleBgColor: #e65540;
+  --toggleSize: 22px;
+}
+
+.page__toggle{
+  font-size: 16px;
+  color: #3d3d3d;
+  font-family: 'Exo 2', sans-serif;
+}
+
+.page__toggle:nth-child(n+2){
+  margin-top: 15px;
+}
+
+////////////radio button filter///////////////////
+.radio {
+  margin: 16px 0;
+  display: block;
+  cursor: pointer;
+  font-family: 'Exo 2', sans-serif;
+  input {
+    display: none;
+    & + span {
+      line-height: $radioSize;
+      height: $radioSize;
+      padding-left: $radioSize;
+      display: block;
+      position: relative;
+      font-family: 'Exo 2', sans-serif;
+      &:not(:empty) {
+        padding-left: $radioSize + 8;
+      }
+      &:before,
+      &:after {
+        content: '';
+        width: $radioSize;
+        height: $radioSize;
+        display: block;
+        border-radius: 50%;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
+      &:before {
+        background: $radioBorder;
+        transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2);
+      }
+      &:after {
+        background: #fff;
+        transform: scale(.78);
+        transition: transform .6s cubic-bezier(.175, .885, .32, 1.4);
+      }
+    }
+    &:checked + span {
+      &:before {
+        transform: scale(1.04);
+        background: $radioActive;
+      }
+      &:after {
+        transform: scale(.4);
+        transition: transform .3s ease;
+      }
+    }
+  }
+  &:hover {
+    input {
+      & + span {
+        &:before {
+          transform: scale(.92);
+        }
+        &:after {
+          transform: scale(.74);
+        }
+      }
+      &:checked + span {
+        &:after {
+          transform: scale(.4);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .shopContainer{
+    width:600px;
+  }}
+
+@media (min-width: 992px) {
+  .shopContainer{
+    width:720px;
+  }}
+
+@media (min-width: 1200px) {
+  .shopContainer {
+    width: 100%;
+    min-width: 1200px !important;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 0 auto;
+  }
+}
+
+///////////// LoadMoreButton ///////////////////
+.loadMoreBtn {
+  position: relative;
+  margin: auto;
+  padding: 19px 22px;
+  transition: all 0.2s ease;
+  color: #2a2a2a;
+}
+.loadMoreBtn:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 28px;
+  background: $loadMoreButton;
+  width: 56px;
+  height: 56px;
+  transition: all 0.3s ease;
+}
+
+.loadMoreBtn span {
+  position: relative;
+  font-size: 16px;
+  line-height: 18px;
+  font-family: 'Exo 2', sans-serif;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.loadMoreBtn:hover:before {
+  width: 100%;
+  background: #ffab9d;
+}
+.loadMoreBtn:active {
+  transform: scale(0.96);
+}
+
+////Search Bar /////////////////////////////////////
+.form-control:focus {
+  box-shadow: none;
+}
+
+
+
+.form-control-underlined {
+  border-width: 0;
+  border-bottom-width: 1px;
+  border-radius: 0;
+  padding-left: 0;
+}
+
+.form-control::placeholder {
+  font-size: 0.95rem;
+  color: #aaa;
+  font-style: italic;
+}
+
+///////////////////////////////
+
+*:focus
+{
+  outline: none;
+}
+
+.inputSelect select:focus {
+  box-shadow: none !important;
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  text-indent: 1px;
+  text-overflow: '';
+  outline: none !important;
+
+}
+
+.inputSelect select::-ms-expand {
+  display: none !important;
+}
+
+.cart-badge, cart-badge:hover{
+  border-radius: 60%;
+  padding: 5px;
+  font-size: 10px;
+  background-color: #2a2a2a;
+  color: #fff3cd;
+}
+
+/////// Related Product //////////////////////////
+input[type="number"].hotfix::-webkit-outer-spin-button,
+input[type="number"].hotfix::-webkit-inner-spin-button {
+  height:auto;
+}
+
+//////Shop Now
+.shopNow {
+  border: 0px;
+  background-color: #0c1923;
+  border-radius: 30px;
+  color: #fff3cd;
+  padding: 2px auto;
+  font-family: 'Exo 2', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.shopNow:hover {
+  background-color: $loadMoreButton;
+}
+
+.ordersList {
+  font-size: 2rem;
+  font-family: 'Exo 2', sans-serif;
+  border-bottom: 2rem;
+}
+
+.orderStatusMain {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  padding: 5px;
+}
+
+.orderID {
+  border-bottom: 2px solid #0c1923;
+  font-family: 'Exo 2', sans-serif;
+  padding: 5px;
+}
+
+ul.orderDetails li{
+  font-family: 'Exo 2', sans-serif !important;
+  color: #0c1923;
+}
+
+.orderItemHistory{
+  max-height: 300px;
+  font-family: 'Exo 2', sans-serif !important;
+}
+
+.orderItemHistory span{
+  color: #2a2a2a;
+  font-family: 'Exo 2', sans-serif !important;
+}

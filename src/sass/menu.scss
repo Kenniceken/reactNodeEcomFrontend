@@ -1,0 +1,36 @@
+.reactStyles{
+  margin: 0px;
+
+  .form-inline button{
+    border-radius: 0 !important;
+  }
+
+  input .form-control{
+    border-radius: 0 !important;
+  }
+
+  .input-group-append span{
+    border-radius: 0 !important;
+  }
+
+  nav {
+    background-color: #ffffff !important;
+    font-family: 'Exo 2', sans-serif !important;
+  }
+
+}
+
+.leftLinks {
+  position: relative;
+  top: 5px !important;
+  font-size: 20px !important;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block !important;
+  margin-left: -20px;
+}
+
+.navbar-toggler {
+  background-color: #0c1923;
+}
