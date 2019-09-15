@@ -131,7 +131,7 @@ const UpdateCategory = ({match}) => {
 
     return (
         <Layout title={`Hi ${user.name}`}
-                description={`This is Update Product Action Page`} className='container-fluid'>
+                description={`This is Update Category Action Page`} className='container-fluid'>
             <div className="row">
                 <div className="col-md-8 offset-md-2 m-b-250 mb-5">
                     {showError()}

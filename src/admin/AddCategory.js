@@ -49,6 +49,7 @@ const AddCategory = () => {
                 </span>
                 <div className="wrap-input100 validate-input m-b-36">
                     <input
+                        className='input100'
                         onChange={handleChange}
                         value={name}
                         name="name"/>
