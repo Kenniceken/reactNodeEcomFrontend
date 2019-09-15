@@ -9,7 +9,7 @@ const EditProducts = (props) => {
 
     const [products, setProducts] = useState([]);
 
-    const {user, token} = isAuthenticated()
+    const {user, token} = isAuthenticated();
 
     const loadProducts = () => {
         getProducts().then(data => {
@@ -33,7 +33,7 @@ const EditProducts = (props) => {
 
     useEffect(() => {
         loadProducts()
-    }, [props])
+    }, [props]);
 
 
     return (

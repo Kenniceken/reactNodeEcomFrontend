@@ -19,7 +19,7 @@ const AddCategory = () => {
         setError('');
         setName(e.target.value);
 
-    }
+    };
 
     const submitCategoryForm = (e) => {
         e.preventDefault();
@@ -51,10 +51,6 @@ const AddCategory = () => {
                     <input
                         onChange={handleChange}
                         value={name}
-                        autoFocus
-                        className="input100"
-                        type="text"
-                        required
                         name="name"/>
                     <span className="focus-input100"></span>
                 </div>
@@ -76,7 +72,7 @@ const AddCategory = () => {
                     aria-hidden="true">&times;</span></button>
                 {name} has been Created Successfully!!!
             </h3>
-        };
+        }
     };
 
     const showError = () => {
@@ -86,7 +82,7 @@ const AddCategory = () => {
                     aria-hidden="true">&times;</span></button>
                 Category Name Must be Unique!!!
             </h3>
-        };
+        }
     };
 
     const goBackBTN = () => {
@@ -95,7 +91,7 @@ const AddCategory = () => {
                 <Link to='/admin' className='text-info'>Back To Admin Home</Link>
             </div>
         )
-    }
+    };
 
     return (
         <Layout title={`Hi ${user.name}`}
@@ -110,6 +106,6 @@ const AddCategory = () => {
             </div>
         </Layout>
     );
-}
+};
 
 export default AddCategory;

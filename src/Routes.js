@@ -18,6 +18,8 @@ import EditProducts from "./admin/EditProducts";
 import UpdateProduct from "./admin/UpdateProduct";
 import About from "./core/About";
 import Contact from "./core/Contact";
+import EditCategory from "./admin/EditCategory";
+import UpdateCategory from "./admin/UpdateCategory";
 
 
 const Routes = () => {
@@ -38,8 +40,10 @@ const Routes = () => {
                 <Route path="/cart" exact component={Cart} />
                 <AdminRoute path='/orders' exact component={ Orders } />
                 <AdminRoute path='/admin/products' exact component={ EditProducts } />
+                <AdminRoute path='/admin/categories' exact component={ EditCategory } />
                 <PrivateRoute path='/profile/:userId' exact component={ Profile } />
                 <AdminRoute path='/admin/product/update/:productId' exact component={ UpdateProduct } />
+                <AdminRoute path='/admin/category/update/:categoryId' exact component={ UpdateCategory } />
             </Switch>
         </BrowserRouter>
     );

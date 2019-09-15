@@ -16,6 +16,7 @@ const AdminHome = () => {
                     <li className="list-group-item"><Link className='nav-link'  to='/createCategory'>Create Category</Link></li>
                     <li className="list-group-item"><Link className='nav-link'  to='/createProduct'>Create Product</Link></li>
                     <li className="list-group-item"><Link className='nav-link'  to='/admin/products'>Edit Products</Link></li>
+                    <li className="list-group-item"><Link className='nav-link'  to='/admin/categories'>Edit Categories</Link></li>
                     <li className="list-group-item"><Link className='nav-link'  to='/orders'>View Orders</Link></li>
                 </ul>
             </div>

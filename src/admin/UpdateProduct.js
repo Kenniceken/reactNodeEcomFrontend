@@ -3,7 +3,6 @@ import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link, Redirect } from "react-router-dom";
 import { getProduct, getCategories, updateProduct } from "./apiAdmin";
-import ShowImage from "../core/ShowImage";
 
 
 const UpdateProduct = ({match}) => {
@@ -263,7 +262,7 @@ const UpdateProduct = ({match}) => {
                 return <Redirect to='/admin' />
             }
         }
-    }
+    };
 
 
 
@@ -273,7 +272,7 @@ const UpdateProduct = ({match}) => {
                 <Link to='/admin' className='text-info'>Back To Admin Home</Link>
             </div>
         )
-    }
+    };
 
     return (
         <Layout title={`Hi ${user.name}`}
