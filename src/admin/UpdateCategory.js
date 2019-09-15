@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Layout from "../core/Layout";
 import { isAuthenticated } from "../auth";
 import { Link, Redirect } from "react-router-dom";
-import {createCategory, getCategory, updateCategory} from "./apiAdmin";
+import {getCategory, updateCategory} from "./apiAdmin";
 
 
 const UpdateCategory = ({match}) => {
@@ -51,6 +51,25 @@ const UpdateCategory = ({match}) => {
     };
 
 
+    const submitCategoryForm = e => {
+        e.preventDefault();
+        // update with ? you should send category name otherwise what to update?
+        const category = {
+            name: name
+        };
+        updateCategory(match.params.categoryId, user._id, token, category).then(data => {
+            if (data.error) {
+                setValues({ ...values, error: data.error });
+            } else {
+                setValues({
+                    ...values,
+                    name: data.name,
+                    error: false,
+                    redirectToProfile: true
+                });
+            }
+        });
+    };
 
     const updateCategoryForm = () => (
         <div className="wrap-login100 p-l-85 p-r-85 p-t-55 p-b-55">
