@@ -19,14 +19,15 @@ const Contact = () => {
                                 <div className="media contact-info">
                                     <span className="contact-info__icon"><i className="ti-home"></i></span>
                                     <div className="media-body">
-                                        <h3>8th floor, 379 Hudson St</h3>
-                                        <p>New York, NY 10018 </p>
+                                        <h3>108G Persiaran Gurney,</h3>
+                                        <p>Pulau Pinang, 10250 George Town.</p>
+                                        <p>Malaysia</p>
                                     </div>
                                 </div>
                                 <div className="media contact-info">
                                     <span className="contact-info__icon"><i className="ti-tablet"></i></span>
                                     <div className="media-body">
-                                        <h3>(+1) 96 716 6879 </h3>
+                                        <h3>03-7015 4115</h3>
                                         <p>Mon to Fri 9am to 6pm</p>
                                     </div>
                                 </div>

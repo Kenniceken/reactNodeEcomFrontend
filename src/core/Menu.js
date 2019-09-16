@@ -93,7 +93,6 @@ const Menu = ({history}) => (
                     &nbsp;&nbsp;&nbsp;
                     <ul className="navbar-nav media-right dropdownDiv">
                         <li className="nav-item dropdown">
-                            {isAuthenticated() && isAuthenticated().user.role === 0 && (
                                 <Link
                                     to="/cart"
                                     className="nav-link dropdown-toggle"
@@ -103,7 +102,6 @@ const Menu = ({history}) => (
                                          className="header-icon1 js-show-header-dropdown" alt="ICON" />
                                     <span className="header-icons-noti">{cartItemTotal()}</span>
                                 </Link>
-                            )}
                             {isAuthenticated() && isAuthenticated().user.role === 1 && (
                                 <Link
                                     to="/login"
