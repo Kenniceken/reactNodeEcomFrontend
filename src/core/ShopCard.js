@@ -44,7 +44,7 @@ const ShopCard = ({product}) => {
                     </div>
                 </div>
                 <div className="product-btm">
-                    <Link to="#" className="d-block">
+                    <Link to={`/product/${product._id}`}  className="d-block">
                         <h4>{product.name}</h4>
                     </Link>
                     <div className="mt-3">
