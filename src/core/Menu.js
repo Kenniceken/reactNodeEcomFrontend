@@ -102,17 +102,17 @@ const Menu = ({history}) => (
                                          className="header-icon1 js-show-header-dropdown" alt="ICON" />
                                     <span className="header-icons-noti">{cartItemTotal()}</span>
                                 </Link>
-                            {isAuthenticated() && isAuthenticated().user.role === 1 && (
-                                <Link
-                                    to="/login"
-                                    className="nav-link dropdown-toggle"
-                                    style={{color: '#3d3d3d'}}
-                                    data-toggle="dropdown">
-                                    <img src="../images/icons/adminIcon.png"
-                                         className="header-icon1 js-show-header-dropdown" alt="ICON" />
-                                    <span className="header-icons-noti"></span>
-                                </Link>
-                            )}
+                            {/*{isAuthenticated() && isAuthenticated().user.role === 1 && (*/}
+                            {/*    <Link*/}
+                            {/*        to="/login"*/}
+                            {/*        className="nav-link dropdown-toggle"*/}
+                            {/*        style={{color: '#3d3d3d'}}*/}
+                            {/*        data-toggle="dropdown">*/}
+                            {/*        <img src="../images/icons/adminIcon.png"*/}
+                            {/*             className="header-icon1 js-show-header-dropdown" alt="ICON" />*/}
+                            {/*        <span className="header-icons-noti"></span>*/}
+                            {/*    </Link>*/}
+                            {/*)}*/}
                             <ul className="dropdown-menu">
                                 {isAuthenticated() && isAuthenticated().user.role === 0 && (
                                     <Fragment>
