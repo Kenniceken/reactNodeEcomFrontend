@@ -47,7 +47,7 @@ const UserHome = () => {
                 <ul className="list-group">
                     <li className="list-group-item">Name: {name}</li>
                     <li className="list-group-item">Email: {email}</li>
-                    <li className="list-group-item">Role: <b><i>{role === 1 ? 'Admin' : 'Verified Account'}</i></b></li>
+                    <li className="list-group-item">Account Status: <b><i>{role === 1 ? 'Admin' : 'Verified'}</i></b></li>
                 </ul>
             </div>
         );
