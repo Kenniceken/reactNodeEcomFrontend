@@ -102,6 +102,7 @@ const ForgotPassword  = () => {
             <div className="row">
                 <div className="col-md-8 offset-md-2 m-b-250 mb-5">
                     {forgotPasswordForm()}
+                    {redirectUser()}
                 </div>
             </div>
         </Layout>

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { getOrderHistory } from "./apiUser";
 import moment from "moment";
 
-const UserHome = () => {
+const UserHome = (props) => {
     const [history, setHistory] = useState([]);
 
     const { user: {_id, name, email, role} } = isAuthenticated();
@@ -24,17 +24,15 @@ const UserHome = () => {
 
     useEffect(() => {
         init(_id, token)
-    }, [])
+    }, [props])
 
     const userLinks = () => {
         return (
             <div className='card mb-5'>
                 <h4 className='card-header'>User Links</h4>
                 <ul className="list-group">
-                    <li className="list-group-item"><Link className='nav-link'  to='/user/password'>Change Password</Link></li>
                     <li className="list-group-item"><Link className='nav-link'  to={`/profile/${_id}`}>Update Account</Link></li>
-                    <li className="list-group-item"><Link className='nav-link'  to='/profile/address'>Shipping Address</Link></li>
-                    <li className="list-group-item"><Link className='nav-link'  to='/order/'>View Order History</Link></li>
+                    <li className="list-group-item"><Link className='nav-link'  to={`/account/user`}>View Order History</Link></li>
                 </ul>
             </div>
         );

@@ -1,24 +1,26 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import Layout from "../core/Layout";
 import { resetPassword } from "../auth";
+import { Redirect } from "react-router-dom";
 
 const ResetPassword = (props) => {
     const [values, setValues] = useState({
         newPassword: '',
         error: false,
-        success: false
+        success: false,
+        redirectToLogin: false
     });
 
-    const {newPassword, error, success} = values;
+    const {newPassword, error, success, redirectToLogin} = values;
     const handleChange = (newPassword) => event => {
         setValues({...values, [newPassword]: event.target.value })
     };
 
     const submitResetPassword = e => {
         e.preventDefault();
-        setValues({error: false, success: false});
+        setValues({...values, error: false, success: false, redirectToLogin: false});
         resetPassword({
-            newPassword,
+            newPassword: newPassword,
             resetPasswordLink: props.match.params.resetPasswordToken
         })
             .then(data => {
@@ -27,9 +29,17 @@ const ResetPassword = (props) => {
                     setValues({...values, error: data.error})
                 } else {
                     console.log(data.success);
-                    setValues({...values, success: data.success, newPassword: ''});
+                    setValues({...values, success: data.success, newPassword: '', redirectToLogin: true});
                 }
             });
+    };
+
+    const redirectUser = () => {
+        if (redirectToLogin) {
+            if (!error) {
+                return <Redirect  to='/login'/>
+            }
+        }
     };
 
 
@@ -45,17 +55,16 @@ const ResetPassword = (props) => {
                 <span className="login100-form-title p-b-32 m-b-7">
                     Reset Password Form
                 </span>
-                <span className="txt1 p-b-11">
-                    Email:
+                <br/>
+                <br/>
+                <span className="txt1 p-b-5">
+                    New Password:
                 </span>
                 <br/><br/>
-                <div className="wrap-input100 validate-input m-b-36">
-                    <span className="btn-show-pass">
-                        <i className="fa fa-lock"></i>
-                    </span>
+                <div className="wrap-input100 validate-input m-b-36 form-group">
                     <input
                         onChange={handleChange('newPassword')}
-                        className="input100"
+                        className="input100 form-control col-md-5"
                         type="password"
                         name="newPassword"
                         placeholder='Enter New Password'
@@ -66,7 +75,7 @@ const ResetPassword = (props) => {
                     <button
                         onClick={submitResetPassword}
                         type="submit"
-                        className="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4">
+                        className="flex-c-m size2 bg1 bo-rad-23 hov1 m-text3 trans-0-4 btn btn-outline-secondary">
                         Change Password
                     </button>
                 </div>
@@ -80,6 +89,7 @@ const ResetPassword = (props) => {
             <div className="row">
                 <div className="col-md-8 offset-md-2 m-b-250 mb-5">
                     {resetPasswordForm()}
+                    {redirectUser()}
                 </div>
             </div>
         </Layout>

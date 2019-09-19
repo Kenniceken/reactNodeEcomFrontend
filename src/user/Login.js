@@ -121,13 +121,13 @@ const Login = () => {
     const redirectUser =  () => {
         if (redirectToReferrer) {
             if (user && user.role === 1) {
-                return <Redirect to='/admin' />;
+                return <Redirect to='/account/admin'/>;
             } else {
-                return <Redirect to='/user' />;
+                return <Redirect to='/account/user'/>;
             }
         }
         if (isAuthenticated()) {
-            return <Redirect to='/' />;
+            return <Redirect to='/'/>;
         }
     }
 

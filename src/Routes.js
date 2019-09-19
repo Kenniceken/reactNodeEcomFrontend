@@ -31,13 +31,11 @@ const Routes = () => {
                 <Route path="/" exact component={Home}/>
                 <Route path="/shop" exact component={Shop}/>
                 <Route path="/login" exact component={Login}/>
-                <Route exact path="/forgot-password" component={ForgotPassword} />
-                <Route exact path="/reset-password/:resetPasswordToken" component={ResetPassword} />
                 <Route path="/about" exact component={About}/>
                 <Route path="/contact" exact component={Contact}/>
                 <Route path="/register" exact component={Register}/>
-                <PrivateRoute path='/user' exact component={ UserHome } />
-                <AdminRoute path='/admin' exact component={ AdminHome } />
+                <PrivateRoute path='/account/user' exact component={ UserHome } />
+                <AdminRoute path='/account/admin' exact component={ AdminHome } />
                 <AdminRoute path='/createCategory' exact component={ AddCategory } />
                 <AdminRoute path='/createProduct' exact component={ AddProduct } />
                 <Route path="/product/:productId" exact component={Product} />
@@ -48,6 +46,8 @@ const Routes = () => {
                 <PrivateRoute path='/profile/:userId' exact component={ Profile } />
                 <AdminRoute path='/admin/product/update/:productId' exact component={ UpdateProduct } />
                 <AdminRoute path='/admin/category/update/:categoryId' exact component={ UpdateCategory } />
+                <Route exact path="/forgot-password" component={ForgotPassword} />
+                <Route exact path="/reset-password/:resetPasswordToken" component={ResetPassword} />
             </Switch>
         </BrowserRouter>
     );

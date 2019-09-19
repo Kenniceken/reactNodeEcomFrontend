@@ -54,7 +54,7 @@ const Menu = ({history}) => (
                                 {isAuthenticated() && isAuthenticated().user.role === 0 && (
                                     <Fragment>
                                         <li className="nav-item">
-                                            <Link to="/user"
+                                            <Link to="/account/user"
                                                   className="nav-link"
                                                   style={isActive(history, "/user")}>
                                                 <i className='fa fa-user-secret header-icon1 js-show-header-dropdown'></i>   My Account
@@ -72,9 +72,9 @@ const Menu = ({history}) => (
                                 {isAuthenticated() && isAuthenticated().user.role === 1 && (
                                     <Fragment>
                                         <li className="nav-item">
-                                            <Link to="/admin"
+                                            <Link to="/account/admin"
                                                   className="nav-link"
-                                                  style={isActive(history, "/admin")}>
+                                                  style={isActive(history, "/account/admin")}>
                                                 <i className='fa fa-user-secret header-icon1 js-show-header-dropdown'></i>   Admin Account
                                             </Link>
                                         </li>
@@ -143,11 +143,6 @@ const Menu = ({history}) => (
                                         <li className="nav-item">
                                             <Link to="/orders"  className="nav-link" style={isActive(history, "/orders")}>
                                                 <i className="fas fa-th-large"></i>   View Orders
-                                            </Link>
-                                        </li>
-                                        <li className="nav-item">
-                                            <Link to="/users"  className="nav-link" style={isActive(history, "/users")}>
-                                                <i className='fas fa-user-plus'></i>   Users
                                             </Link>
                                         </li>
                                     </Fragment>
