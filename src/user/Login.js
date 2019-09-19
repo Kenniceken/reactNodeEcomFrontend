@@ -87,7 +87,15 @@ const Login = () => {
                         Login
                     </button>
                 </div>
-
+                <div className="flex-sb-m w-full p-b-48">
+                    <div className="contact100-form-checkbox">
+                    </div>
+                    <div>
+                        <Link to="/forgot-password" className="txt3">
+                            Forgot Password?
+                        </Link>
+                    </div>
+                </div>
             </form>
         </div>
     );

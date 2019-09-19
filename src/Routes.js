@@ -20,6 +20,8 @@ import About from "./core/About";
 import Contact from "./core/Contact";
 import EditCategory from "./admin/EditCategory";
 import UpdateCategory from "./admin/UpdateCategory";
+import ForgotPassword from "./user/ForgotPassword";
+import ResetPassword from "./user/ResetPassword";
 
 
 const Routes = () => {
@@ -29,6 +31,8 @@ const Routes = () => {
                 <Route path="/" exact component={Home}/>
                 <Route path="/shop" exact component={Shop}/>
                 <Route path="/login" exact component={Login}/>
+                <Route exact path="/forgot-password" component={ForgotPassword} />
+                <Route exact path="/reset-password/:resetPasswordToken" component={ResetPassword} />
                 <Route path="/about" exact component={About}/>
                 <Route path="/contact" exact component={Contact}/>
                 <Route path="/register" exact component={Register}/>

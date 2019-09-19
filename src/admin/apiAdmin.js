@@ -75,7 +75,6 @@ export const updateCategory = (categoryId, userId, token, category) => {
     return fetch(`${API}/category/${categoryId}/${userId}`, {
         method: 'PUT',
         headers: {
-            // content type???
             'Content-Type': 'application/json',
             Accept: 'application/json',
             Authorization: `Bearer ${token}`

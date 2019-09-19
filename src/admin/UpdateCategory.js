@@ -7,7 +7,6 @@ import {getCategory, updateCategory} from "./apiAdmin";
 
 const UpdateCategory = ({match}) => {
 
-
     const [values, setValues] = useState({
         name: '',
         error: '',
