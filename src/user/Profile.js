@@ -63,7 +63,8 @@ const Profile = ({match}) => {
 
     const redirectUser = (success) => {
         if (success) {
-            return <Redirect to='/user' />
+            return <Redirect to='/'/>
+            window.location.reload();
         }
     }
 
