@@ -18,6 +18,7 @@ const AdminHome = () => {
                     <li className="list-group-item"><Link className='nav-link'  to='/admin/products'>Edit Products</Link></li>
                     <li className="list-group-item"><Link className='nav-link'  to='/admin/categories'>Edit Categories</Link></li>
                     <li className="list-group-item"><Link className='nav-link'  to='/orders'>View Orders</Link></li>
+                    <li className="list-group-item"><Link className='nav-link'  to={`/profile/${_id}`}>Update Account</Link></li>
                 </ul>
             </div>
         );

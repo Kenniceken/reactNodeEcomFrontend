@@ -235,7 +235,7 @@ const AddProduct = () => {
     const goBackBTN = () => {
         return (
             <div className='mt-5'>
-                <Link to='/admin' className='text-info'>Back To Admin Home</Link>
+                <Link to='/admin/products' className='text-info'>Back To Admin Home</Link>
             </div>
         )
     }

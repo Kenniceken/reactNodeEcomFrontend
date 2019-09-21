@@ -259,7 +259,7 @@ const UpdateProduct = ({match}) => {
     const redirectUser = () => {
         if (redirectToProfile) {
             if (!error) {
-                return <Redirect to='/admin' />
+                return <Redirect to='/admin/products' />
             }
         }
     };
