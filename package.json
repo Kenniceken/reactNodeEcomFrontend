@@ -9,7 +9,7 @@
     "braintree-web-drop-in-react": "^1.0.10",
     "bulma": "^0.7.5",
     "mdbreact": "^4.19.1",
-    "moment": "^2.24.0",
+    "moment": "^2.29.2",
     "node-sass": "^4.12.0",
     "query-string": "^6.8.2",
     "react": "^16.9.0",
